@@ -5,7 +5,7 @@ import lombok.Getter;
 
 @Getter
 @Builder
-public class GeminiResponse {
+public class GeminiPromptResponse {
 
-	private String content;
+	private String response;
 }
