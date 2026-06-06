@@ -4,8 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.mockmate.ai.GeminiService;
-import com.mockmate.ai.prompts.CoverLetterPromptBuilder;
+import com.mockmate.mockmate_backend.ai.prompts.CoverLetterPromptBuilder;
 import com.mockmate.mockmate_backend.dto.request.GenerateCoverLetterRequest;
 import com.mockmate.mockmate_backend.dto.response.CoverLetterResponse;
 import com.mockmate.mockmate_backend.entity.CoverLetter;
@@ -15,6 +14,7 @@ import com.mockmate.mockmate_backend.exception.ResourceNotFoundException;
 import com.mockmate.mockmate_backend.repository.CoverLetterRepository;
 import com.mockmate.mockmate_backend.repository.UserRepository;
 import com.mockmate.mockmate_backend.service.CoverLetterService;
+import com.mockmate.mockmate_backend.service.GeminiService;
 
 import lombok.RequiredArgsConstructor;
 

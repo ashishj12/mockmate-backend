@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.mockmate.mockmate_backend.dto.request.GenerateInterviewRequest;
 import com.mockmate.mockmate_backend.dto.request.ImprovementTipRequest;
 import com.mockmate.mockmate_backend.dto.request.SubmitAssessmentRequest;
+import com.mockmate.mockmate_backend.dto.response.ApiResponse;
 import com.mockmate.mockmate_backend.dto.response.AssessmentResponse;
 import com.mockmate.mockmate_backend.dto.response.ImprovementTipResponse;
 import com.mockmate.mockmate_backend.dto.response.InterviewResponse;

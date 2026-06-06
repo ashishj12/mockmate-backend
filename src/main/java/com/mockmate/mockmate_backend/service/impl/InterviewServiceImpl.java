@@ -4,8 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.mockmate.ai.GeminiService;
-import com.mockmate.ai.prompts.InterviewPromptBuilder;
+import com.mockmate.mockmate_backend.ai.prompts.InterviewPromptBuilder;
 import com.mockmate.mockmate_backend.dto.request.GenerateInterviewRequest;
 import com.mockmate.mockmate_backend.dto.request.ImprovementTipRequest;
 import com.mockmate.mockmate_backend.dto.request.SubmitAssessmentRequest;
@@ -13,10 +12,12 @@ import com.mockmate.mockmate_backend.dto.response.AssessmentResponse;
 import com.mockmate.mockmate_backend.dto.response.ImprovementTipResponse;
 import com.mockmate.mockmate_backend.dto.response.InterviewResponse;
 import com.mockmate.mockmate_backend.entity.Assessment;
+import com.mockmate.mockmate_backend.entity.User;
 import com.mockmate.mockmate_backend.exception.AIServiceException;
 import com.mockmate.mockmate_backend.exception.ResourceNotFoundException;
 import com.mockmate.mockmate_backend.repository.AssessmentRepository;
 import com.mockmate.mockmate_backend.repository.UserRepository;
+import com.mockmate.mockmate_backend.service.GeminiService;
 import com.mockmate.mockmate_backend.service.InterviewService;
 
 import lombok.RequiredArgsConstructor;

@@ -2,8 +2,7 @@ package com.mockmate.mockmate_backend.service.impl;
 
 import org.springframework.stereotype.Service;
 
-import com.mockmate.ai.GeminiService;
-import com.mockmate.ai.prompts.AtsPromptBuilder;
+import com.mockmate.mockmate_backend.ai.prompts.AtsPromptBuilder;
 import com.mockmate.mockmate_backend.dto.request.AtsAnalysisRequest;
 import com.mockmate.mockmate_backend.dto.response.AtsAnalysisResponse;
 import com.mockmate.mockmate_backend.entity.AtsAnalysis;
@@ -15,6 +14,7 @@ import com.mockmate.mockmate_backend.repository.AtsAnalysisRepository;
 import com.mockmate.mockmate_backend.repository.ResumeRepository;
 import com.mockmate.mockmate_backend.repository.UserRepository;
 import com.mockmate.mockmate_backend.service.AtsService;
+import com.mockmate.mockmate_backend.service.GeminiService;
 
 import lombok.RequiredArgsConstructor;
 
