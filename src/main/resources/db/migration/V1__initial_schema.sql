@@ -27,7 +27,7 @@ CREATE INDEX idx_users_email ON users(email);
 CREATE TABLE resumes (
     id BIGSERIAL PRIMARY KEY,
     user_id BIGINT NOT NULL UNIQUE,
-    content JSONB NOT NULL,
+    content TEXT NOT NULL,
 
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -39,7 +39,6 @@ CREATE TABLE resumes (
 );
 
 CREATE INDEX idx_resume_user ON resumes(user_id);
-CREATE INDEX idx_resume_content ON resumes USING GIN (content);
 
 -- =========================
 -- ATS ANALYSIS
@@ -55,6 +54,7 @@ CREATE TABLE ats_analysis (
     raw_response JSONB,
 
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
     CONSTRAINT fk_ats_resume
         FOREIGN KEY(resume_id)

@@ -27,7 +27,7 @@ public class Resume extends BaseEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(columnDefinition = "jsonb")
+	@Column(columnDefinition = "TEXT", nullable = false)
 	private String content;
 
 	@OneToOne
