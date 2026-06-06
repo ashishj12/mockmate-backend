@@ -28,7 +28,7 @@ public class Assessment extends BaseEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(name = "quiz_score")
+	@Column(name = "quiz_score", nullable = false)
 	private Integer quizScore;
 
 	@Column(columnDefinition = "jsonb")

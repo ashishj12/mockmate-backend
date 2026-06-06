@@ -5,6 +5,7 @@ import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -33,11 +34,13 @@ public class User extends BaseEntity {
 	@Column(name = "clerk_user_id", nullable = false, unique = true)
 	private String clerkUserId;
 
+	@Column(nullable = false, unique = true)
 	private String email;
 
+	@Column(nullable = false)
 	private String name;
 
-	@Column(name = "image_url")
+	@Column(name = "image_url", columnDefinition = "TEXT")
 	private String imageUrl;
 
 	private String industry;
@@ -49,7 +52,7 @@ public class User extends BaseEntity {
 	@Column(columnDefinition = "TEXT")
 	private String skills;
 
-	@OneToOne(mappedBy = "user")
+	@OneToOne(mappedBy = "user", fetch = FetchType.LAZY)
 	private Resume resume;
 
 	@OneToMany(mappedBy = "user")
@@ -58,6 +61,6 @@ public class User extends BaseEntity {
 	@OneToMany(mappedBy = "user")
 	private List<Assessment> assessments = new ArrayList<>();
 
-	@OneToOne(mappedBy = "user")
+	@OneToOne(mappedBy = "user", fetch = FetchType.LAZY)
 	private IndustryInsight industryInsight;
 }

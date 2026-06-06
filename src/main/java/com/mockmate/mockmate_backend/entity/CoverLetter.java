@@ -28,16 +28,16 @@ public class CoverLetter extends BaseEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(name = "company_name")
+	@Column(name = "company_name", nullable = false)
 	private String companyName;
 
-	@Column(name = "job_title")
+	@Column(name = "job_title", nullable = false)
 	private String jobTitle;
 
 	@Column(name = "job_description", columnDefinition = "TEXT")
 	private String jobDescription;
 
-	@Column(columnDefinition = "TEXT")
+	@Column(columnDefinition = "TEXT", nullable = false)
 	private String content;
 
 	@ManyToOne(fetch = FetchType.LAZY)

@@ -10,9 +10,9 @@ import io.swagger.v3.oas.models.info.Info;
 public class OpenApiConfig {
 
 	@Bean
-	public OpenAPI mockMateOpenApi() {
+	public OpenAPI openAPI() {
 
 		return new OpenAPI().info(
-				new Info().title("MockMate API").version("v1").description("AI Powered Career Coaching Platform"));
+				new Info().title("MockMate API").version("1.0").description("AI Powered Career Coaching Platform"));
 	}
 }

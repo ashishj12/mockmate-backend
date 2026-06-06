@@ -9,7 +9,7 @@ import com.mockmate.mockmate_backend.entity.User;
 
 public interface ResumeRepository extends JpaRepository<Resume, Long> {
 
-	Optional<Resume> findByUser(User user);
+	Optional<Resume> findByUserId(Long userId);
 
 	boolean existsByUser(User user);
 }

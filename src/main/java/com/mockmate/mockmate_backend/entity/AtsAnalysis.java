@@ -42,6 +42,6 @@ public class AtsAnalysis extends BaseEntity {
 	private String rawResponse;
 
 	@OneToOne
-	@JoinColumn(name = "resume_id", nullable = false)
+	@JoinColumn(name = "resume_id", nullable = false, unique = true)
 	private Resume resume;
 }
